@@ -213,11 +213,11 @@ def evaluateRandomly(encoder, decoder, pairs, input_lang, output_lang ,n=10):
     """
     for i in range(n):
         pair = random.choice(pairs)
-        print(">", pair[0])
-        print("=", pair[1])
+        print("FR       :", pair[0])
+        print("ENG (GT) :", pair[1])
         output_words, _ = evaluate(encoder, decoder, pair[0], input_lang, output_lang)
         output_sentence = " ".join(output_words)
-        print("<", output_sentence)
+        print("ENG (Pred):", output_sentence)
         print("")
 
 

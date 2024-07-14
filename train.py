@@ -12,6 +12,8 @@ EOS_token = 1
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 dataset_path = "data/"
 
+# Define English and French prefixes to be used for training
+# These prefixes are used to filter out sentences that do not contain the prefixes
 eng_prefixes = (
     "i am ",
     "i m ",
